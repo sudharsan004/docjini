@@ -1,0 +1,69 @@
+/* main text */
+.hero-text{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+}
+
+/* Nav bar */
+.brand-logo{
+    font-family: 'Sacramento', cursive;
+    font-weight: bolder;
+}
+
+/* Search container*/
+.btn{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+/* footer */
+.page-footer{
+    margin-top: 20%;padding-top: 0;
+}
+#mobile-demo a{
+    color: white;
+}
+
+/*----media quries---- */
+
+/* responsive icon */
+@media (min-width:700px){
+.medium{
+    display: none;
+}
+}
+
+/* hide explanation text in mobile to get space */
+@media (max-width:500px){
+    .small-text{
+        display:none;
+    }
+    .btn{
+        size: 80%;
+    }
+}
+/* responsive-mobile view */
+@media (max-width:700px){
+    .large{
+        display: none;
+    }
+    .btn{
+        margin-top: 5%;
+    }
+    .logo-text{
+        font-family: 'Merriweather', serif;
+        font-size: 1rem;
+    }
+    .row{
+        margin-bottom: 0;
+    }
+    .hero-text{
+        text-align: center;
+        font-family: 'Merriweather', serif;
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin-top: 23px;
+    }
+}

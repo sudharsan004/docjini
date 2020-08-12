@@ -1,0 +1,106 @@
+{% extends 'find/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container" style="margin-top: 150px;">
+  <form action="{% url 'results'  %}" class="row" method="post">
+    {% csrf_token %}
+
+    <input required type="text" name="search" value="{{search_term}}">
+    <div class="center">
+      <div class="input-field col s6" style="padding-left: 0px;">
+        <select name="format" required>
+
+          <option value="{{file_format}}" selected>{{file_format}}</option>
+          <option value="docs" >Docs</option>
+          <option value="pdf">Pdf</option>
+          <option value="doc">Doc</option>
+          <option value="xls">Excel</option>
+          <option value="ppt">Ppt</option>
+          <option value="txt">Txt</option>
+        </select>
+
+        <label>Select file format</label>
+      </div>
+    
+      <button class="btn waves-effect waves-light z-depth-3 blue darken-4" style="margin-top: 25px; margin-left: 0;"
+        type="submit" name="action">Search
+        <i class="material-icons right">send</i>
+      </button>
+    </div><input type="hidden" name="start_index" value="1" />
+  </form>
+    <h3>The {{file_format}} Results for {{search_term}} are</h3>
+    <ul class="collection">
+
+        {% for i in result %}
+        <li class="row collection-item avatar">
+            <img src="{% static 'images/' %}{{file_format}}.png" alt="pdf" style="display:inline-block; width: 75px;" class="col s1" width="100px">
+            <div class="col s10">
+                <strong><span class="title" style="display: inline-block;">{{ i.title }}</span></strong>
+                <p>
+                    {{i.description}}
+                </p>
+                <a href="{{i.link}}" target="_blank" class="secondary-content"><i class="material-icons " width='125px'
+                        style="color: tomato; ">get_app</i></a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- <div class="hidden" style="display: none;">
+        <input value="{{search_term}}" type="text" name="search" placeholder="search">
+
+        <div class="input-field col s6" style="padding-left: 0px;">
+            <select name="format">
+                <option value="{{file_format}}" selected>Pdf</option>
+            </select>
+            <label>Select file format</label>
+        </div>
+    </div> -->
+
+
+    <form action="{% url 'results'  %}" class="row" method="post">
+        {% csrf_token %}
+  
+        <input  type="hidden" name="search" value='{{ search_term }}' >
+        <input  type="hidden" name="format" value='{{ file_format }}' >
+        <div class="center-align">
+          <div class="input-field col s6" style="padding-left: 0px;">
+          <!--  <select name="format" >
+              <option value="pdf" selected>Pdf</option>
+               <option value="docs" >Docs</option> 
+              <option value="doc">Doc</option>
+              <option value="xls">Excel</option>
+              <option value="ppt">Ppt</option>
+              <option value="txt">Txt</option>
+            </select>-->
+            <input type="hidden" name="start_index" value="{{ start_index }}">
+            <!-- <label>Select file format</label> -->
+          </div>
+          <!-- Submit button -->
+          <div class="row center-align">
+          <button class="btn waves-effect waves-light z-depth-3 blue darken-4"  type="submit"
+            name="action">Next Page
+            <i class="material-icons right">send</i>
+          </button></div>
+        </div>
+      </form>
+
+
+<!-- <form action="{% url 'results'  %}" method="post"> -->
+<!-- <ul class="pagination"> -->
+
+<!-- <li class="disabled"><a href="{% url 'results'  %}"><i class="material-icons">chevron_left</i></a></li>
+         <li class=""><a href="{% url 'results'  %}">1</a></li> 
+        <li name='page' onclick="setGetPArameter()" value="1" class="waves-effect"><a>1</a></li>
+        <li name='page' onclick="setGetPArameter()" value="2" class="waves-effect"><a>2</a></li>
+        <li name='page' onclick="setGetPArameter()" value="3" class="waves-effect"><a>3</a></li>
+        <li name='page' onclick="setGetPArameter()" value="4" class="waves-effect"><a>4</a></li>
+        <li name='page' onclick="setGetPArameter()" value="5" class="waves-effect"><a>5</a></li>
+     <li name='page' class="waves-effect"><a href="{% url 'results'  %}"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+     </form> -->
+</div>
+
+
+{% endblock content %}

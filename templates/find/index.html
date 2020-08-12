@@ -1,0 +1,62 @@
+{% extends 'find/base.html' %}
+{% block content %}
+<!-- Main section  -->
+<div class="container hero">
+  <h1 class="hero-text">Find docs with a click.</h1>
+  <div class="row">
+    <div class="col s4">
+      <!-- Promo Content 1 goes here -->
+      <div class="center">
+        <i class="large material-icons " style="color: #EE6E73">flash_on</i>
+        <i class="medium material-icons " style="color: #EE6E73">flash_on</i>
+        <p class="icon-text">Get faster results.</p>
+        <!-- <p class="light center small-text">Scrape away right here with a beautiful GUI.</p> -->
+      </div>
+    </div>
+
+    <div class="col s4">
+      <!-- Promo Content 2 goes here -->
+      <div class="center">
+        <i class="medium material-icons " style="color: orange">camera</i>
+        <i class="large material-icons " style="color: orange">camera</i>
+        <p class="icon-text">Filter your searches.</p>
+        <!-- <p class="light center small-text">We built in functionality to filter based on pricing.</p> -->
+      </div>
+    </div>
+
+    <div class="col s4">
+      <!-- Promo Content 3 goes here -->
+      <div class="center">
+        <i class="medium material-icons " style="color: blue">chrome_reader_mode</i>
+        <i class="large material-icons" style="color: blue">chrome_reader_mode</i>
+        <p class="icon-text">Results across the web.</p>
+        <!-- <p class="light center small-text">We built this with ❤️</p> -->
+      </div>
+    </div>
+  </div>
+  <!-- Search bar -->
+  <form action="{% url 'results'  %}" class="row" method="post">
+    {% csrf_token %}
+
+    <input required type="text" name="search" placeholder="search">
+    <div class="center">
+      <div class="input-field col s6" style="padding-left: 0px;">
+        <select name="format" required>
+          <option value="pdf" selected>Pdf</option>
+          <!-- <option value="docs" >Docs</option> -->
+          <option value="doc">Doc</option>
+          <option value="xls">Excel</option>
+          <option value="ppt">Ppt</option>
+          <option value="txt">Txt</option>
+        </select>
+
+        <label>Select file format</label>
+      </div>
+      <!-- Submit button -->
+      <button class="btn waves-effect waves-light z-depth-3 blue darken-4" style="margin-top: 25px; margin-left: 0;"
+        type="submit" name="action">Search
+        <i class="material-icons right">send</i>
+      </button>
+    </div><input type="hidden" name="start_index" value="1" />
+  </form>
+  {% endblock content %}
