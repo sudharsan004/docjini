@@ -13,7 +13,6 @@
         <select name="format" required>
 
           <option value="{{file_format}}" selected>{{file_format}}</option>
-          <option value="docs" >Docs</option>
           <option value="pdf">Pdf</option>
           <option value="doc">Doc</option>
           <option value="xls">Excel</option>
@@ -34,7 +33,7 @@
     <ul class="collection">
 
         {% for i in result %}
-        <li class="row collection-item avatar">
+        <li class="row collection-item avatar" style="padding-left: 20px;">
             <img src="{% static 'images/' %}{{file_format}}.png" alt="pdf" style="display:inline-block; width: 75px;" class="col s1" width="100px">
             <div class="col s10">
                 <strong><span class="title" style="display: inline-block;">{{ i.title }}</span></strong>
