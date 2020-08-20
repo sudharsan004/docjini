@@ -3,22 +3,22 @@
 <!-- Nav Bar -->
 <nav class="z-depth-1 purple darken-3">
   <div class="container nav-wrapper">
-    <a href="#!" class="brand-logo">Docsfinder</a>
+    <a href="{% url 'home' %}" class="brand-logo">Docjini</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><a href="{% url 'home' %}">Home</a></li>
       <!-- <li><a href="badges.html">About</a></li> -->
-      <li><a href="collapsible.html">How to</a></li>
-      <li><a href="mobile.html">Contact Us</a></li>
+      <li><a href="{% url 'home' %}">How to</a></li>
+      <li><a href="{% url 'home' %}">Contact Us</a></li>
     </ul>
   </div>
 </nav>
 
 <ul class="sidenav right purple lighten-3" id="mobile-demo">
   <div class="container" style="text-align: center; margin-top: 25%; color: white;">
-    <li><h5><a href="sass.html">Sass</a>              </h5></li>
-    <li><h5><a href="badges.html">Components</a>      </h5></li>
-    <li><h5><a href="collapsible.html">Javascript</a> </h5></li>
-    <li><h5><a href="mobile.html">Mobile</a>          </h5></li>
+    <li><h5><a href="{% url 'home' %}">Home</a>              </h5></li>
+    <li><h5><a href="{% url 'home' %}">How to</a>      </h5></li>
+    <li><h5><a href="{% url 'home' %}">Contact Us</a> </h5></li>
+    
   </div>
 </ul>
