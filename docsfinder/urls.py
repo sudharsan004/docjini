@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from find import views as findViews
+from django.views.generic.base import TemplateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +25,8 @@ urlpatterns = [
     path('results',findViews.results,name='results'),
     path('terms',findViews.terms,name='terms'),
     path('privacy',findViews.privacy,name='privacy'),
+    path(
+        "robots.txt",
+        TemplateView.as_view(template_name="find/robots.txt", content_type="text/plain"),
+    ),
 ]
