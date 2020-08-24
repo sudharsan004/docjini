@@ -29,4 +29,10 @@ urlpatterns = [
         "robots.txt",
         TemplateView.as_view(template_name="find/robots.txt", content_type="text/plain"),
     ),
+path(
+        "sitemap.xml",
+        TemplateView.as_view(template_name="find/sitemap.xml", content_type="text/plain"),
+    ),
+
+
 ]
