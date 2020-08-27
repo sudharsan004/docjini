@@ -3,10 +3,11 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>Free search Download Pdf,Doc,and many more formats across the web quickly.</title>
   <meta charset="UTF-8" />
-  <meta name="description" content="Free Document Search Engine. Find and download pdf, doc, ppt ,excel and text files across the web using docjini">
+  <meta name="description"
+    content="Free Document Search Engine. Find and download pdf, doc, ppt ,excel and text files across the web using docjini">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -18,134 +19,150 @@
   <style>
     /* sticky nav bar */
     body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    /* main text */
+    .hero-text {
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      font-size: 3rem;
+    }
+
+    /* Nav bar */
+    .brand-logo {
+      font-family: 'Sacramento', cursive;
+      font-weight: bolder;
+    }
+
+    /* Search container*/
+    .btn {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+
+    /* footer */
+    .page-footer {
+      margin-top: 20%;
+      padding-top: 0;
+    }
+
+    #mobile-demo a {
+      color: white;
+    }
+
+    /*----media quries---- */
+
+    /* responsive icon */
+    @media (min-width:700px) {
+      .medium {
+        display: none;
       }
-    
-      main {
-        flex: 1 0 auto;
+    }
+
+    /* hide explanation text in mobile to get space */
+    @media (max-width:500px) {
+      .small-text {
+        display: none;
       }
-  
-  /* main text */
-    .hero-text{
+
+      .btn {
+        size: 80%;
+      }
+    }
+
+    /* responsive-mobile view */
+    @media (max-width:700px) {
+      .large {
+        display: none;
+      }
+
+      .btn {
+        margin-top: 5%;
+      }
+
+      .logo-text {
+        font-family: 'Merriweather', serif;
+        font-size: 1rem;
+      }
+
+      .row {
+        margin-bottom: 0;
+      }
+
+      .hero-text {
         text-align: center;
         font-family: 'Merriweather', serif;
-        font-size: 3rem;
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin-top: 23px;
+      }
     }
-    
-    /* Nav bar */
-    .brand-logo{
-        font-family: 'Sacramento', cursive;
-        font-weight: bolder;
-    }
-    
-    /* Search container*/
-    .btn{
-        margin-right: 0;
-        margin-left: 0;
-    }
-    
-    
-    /* footer */
-    .page-footer{
-        margin-top: 20%;padding-top: 0;
-    }
-    #mobile-demo a{
-        color: white;
-    }
-    
-    /*----media quries---- */
-    
-    /* responsive icon */
-    @media (min-width:700px){
-    .medium{
-        display: none;
-    }
-    }
-    
-    /* hide explanation text in mobile to get space */
-    @media (max-width:500px){
-        .small-text{
-            display:none;
-        }
-        .btn{
-            size: 80%;
-        }
-    }
-    /* responsive-mobile view */
-    @media (max-width:700px){
-        .large{
-            display: none;
-        }
-        .btn{
-            margin-top: 5%;
-        }
-        .logo-text{
-            font-family: 'Merriweather', serif;
-            font-size: 1rem;
-        }
-        .row{
-            margin-bottom: 0;
-        }
-        .hero-text{
-            text-align: center;
-            font-family: 'Merriweather', serif;
-            font-weight: 900;
-            font-size: 1.5rem;
-            margin-top: 23px;
-        }
-    }</style>
+  </style>
 </head>
 
 <body>
-  
+
   <!-- Nav bar -->
   {% include 'find/navbar.html' %}
 
   <main>
-  {% block content %}
+    {% block content %}
 
-  {% endblock content %}
-</div>
-<div class="container" style="padding-top: 3%;">
-</div></main>
-<!-- Footer -->
-<footer class="page-footer purple darken-3">
-  <div class="container">
-    <div class="row">
-      <!-- <div class="col l6 s12"> -->
-        <h5 class="white-text">Find Docs Online</h5>
-        <a class="grey-text text-lighten-4 right" style="padding-left:25px;" href="{% url 'terms' %}">Terms</a>
-      <a class="grey-text text-lighten-4 right" href="{% url 'privacy' %}">Privacy</a>
-        <!-- <p class="grey-text text-lighten-4 ">You can use rows and columns here to organize your footer content.</p> -->
-      <!-- </div> -->
+    {% endblock content %}
     </div>
-  </div>
-  <div class="footer-copyright purple darken-2">
-    <div class="container" >
-      © 2020 Searchdocs | Made with ❤ by Sudharsan Thiyagarajan
-      <!-- <a class="grey-text text-lighten-4 right" style="padding-left:25px;" href="{% url 'terms' %}">Terms</a>
+    <div class="container" style="padding-top: 3%;">
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="page-footer purple darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <p class="white-text">Made with ❤ by Sudharsan Thiyagarajan</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <!-- <h5 class="white-text">Links</h5> -->
+          <ul>
+            <li><a class="grey-text text-lighten-4 right" style="padding-left:35px;" href="{% url 'terms' %}">Terms</a>
+            </li>
+            <li><a class="grey-text text-lighten-4 right" href="{% url 'privacy' %}">Privacy</a></li>
+          </ul>
+          <!-- <p class="grey-text text-lighten-4 ">You can use rows and columns here to organize your footer content.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright purple darken-2">
+      <div class="container">
+        © 2020 docjini  
+        <!-- <a class="grey-text text-lighten-4 right" style="padding-left:25px;" href="{% url 'terms' %}">Terms</a>
       <a class="grey-text text-lighten-4 right" href="{% url 'privacy' %}">Privacy</a> -->
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="{% static 'js/index.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{% static 'js/index.js' %}"></script>
 
-<script>
-  // select
-  document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems);
-  });
-  // Mobile Nav bar
-  document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
-  });
-</script>
+  <script>
+    // select
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+    });
+    // Mobile Nav bar
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+  </script>
 </body>
 
 </html>
