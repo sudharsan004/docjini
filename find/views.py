@@ -63,3 +63,5 @@ def terms(request):
     return render(request,'find/terms.html')
 def privacy(request):
     return render(request,'find/privacy.html')
+def howto(request):
+    return render(request,'find/howto.html')

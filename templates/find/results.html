@@ -29,13 +29,13 @@
       </button>
     </div><input type="hidden" name="start_index" value="1" />
   </form>
-    <h5>The {{file_format}} Results for {{search_term}} are</h4>
+    <h5>The {{file_format}} Results for {{search_term}} are</h5>
     <ul class="collection">
 
         {% for i in result %}
         <li class="row collection-item avatar" style="padding-left: 20px;">
-            <img src="{% static 'images/' %}{{file_format}}.png" alt="pdf" style="display:inline-block; width: 75px;" class="col s1" width="100px">
-            <div class="col s10">
+            <img src="{% static 'images/' %}{{file_format}}.png" alt="pdf" style="display:inline-block; width: 60px;" class="col s1" width="100px">
+            <div class="col s12 m9 l10">
                 <strong><span class="title" style="display: inline-block;">{{ i.title }}</span></strong>
                 <p>
                     {{i.description}}
