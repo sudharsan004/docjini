@@ -24,7 +24,7 @@ urlpatterns = [
     path('',findViews.home,name='home'),
     path('results',findViews.results,name='results'),
     path('how-to-use-docjini',findViews.howto,name='how-to'),
-    path('contact',findViews.howto,name='contact'),
+    path('contact',findViews.contact,name='contact'),
     path('terms',findViews.terms,name='terms'),
     path('privacy',findViews.privacy,name='privacy'),
     path(

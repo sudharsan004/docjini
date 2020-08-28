@@ -5,6 +5,8 @@ import requests,random
 from bs4 import BeautifulSoup
 import time,json
 from urllib.parse import urljoin
+from django.core.mail import send_mail
+
 # Create your views here.
 
 def googleCustomSearch(term,fileFormat,*start):
@@ -65,3 +67,19 @@ def privacy(request):
     return render(request,'find/privacy.html')
 def howto(request):
     return render(request,'find/howto.html')
+
+def contact(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        mail=request.POST['mail']
+        subject=request.POST['subject']
+        message=request.POST['message']
+        send_mail(
+            'message from '+name+' regarding '+subject,
+            message+'\n\n his mail: '+mail,
+            mail,
+            ['sudharsansriram8921@gmail.com'],
+            fail_silently=False,)
+        return render(request,'find/contact.html',{'name':name})
+    else:
+        return render(request,'find/contact.html')
