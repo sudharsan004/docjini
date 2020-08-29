@@ -15,5 +15,5 @@ class StaticViewSitemap(sitemaps.Sitemap):
         return reverse(item)
     
     def get_urls(self, site=None, **kwargs):
-        site = Site(domain='3.129.240.172', name='3.129.240.172')
+        site = Site(domain='docjini.com', name='docjini.com')
         return super(StaticViewSitemap, self).get_urls(site=site, **kwargs)
