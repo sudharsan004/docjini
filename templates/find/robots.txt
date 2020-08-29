@@ -1,4 +1,4 @@
-Sitemap: http://3.129.240.172/sitemap.xml
+Sitemap: https://docjini.com/sitemap.xml
 User-Agent: *
 Disallow: /private/
 Disallow: /junk/
