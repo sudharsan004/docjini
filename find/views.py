@@ -85,6 +85,6 @@ def contact(request):
         return render(request,'find/contact.html')
 
 def handler404(request):
-    return render(request, '404.html', status=404)
+    return render(request, 'find/404.html', status=404)
 def handler500(request):
     return render(request, '500.html', status=500)
