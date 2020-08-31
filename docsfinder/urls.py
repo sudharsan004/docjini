@@ -47,5 +47,3 @@ path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
 
 ]
 
-handler404 = myapp.views.handler404
-handler500 = myapp.views.handler500
