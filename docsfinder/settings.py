@@ -26,7 +26,7 @@ SECRET_KEY = 'gr)lh2cp19x%_vkf$*9rfc5zhh-#4-^@jg5v9r0_yqu+1b=osd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['15.207.158.4','docjini.com','www.docjini.com']
+ALLOWED_HOSTS = ['15.207.158.4','docjini.com','www.docjini.com','*']
 
 
 # Application definition
