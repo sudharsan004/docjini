@@ -1,6 +1,21 @@
-{% extends 'find/base.html' %}
 {% load static %}
-{% block content %}
+<!-- Main section  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Docjini-Privacy</title>
+    <meta name="description"
+        content="Privacy Docjini">
+    {% include 'find/header.html' %}
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    {% include 'find/navbar.html' %}
+
+    <main>
 <div class="container">
     <h1>Privacy Policy for Searchdocs</h1>
 
@@ -88,4 +103,9 @@
     
     <p>searchdocs does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
     </div>
-{% endblock content %}
+</main>
+<!-- Footer -->
+{% include 'find/footer.html' %}
+</body>
+
+</html>

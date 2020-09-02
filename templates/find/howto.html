@@ -1,15 +1,50 @@
-{% extends 'find/base.html' %}
 {% load static %}
-{% block content %}
-   
+<!-- Main section  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Docjini-FAQ</title>
+    <meta name="description" content="Frequently Asked Questions about Docjini. How to Search Docs online | Document Search
+    Engine">
+    {% include 'find/header.html' %}
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    {% include 'find/navbar.html' %}
+
     <main>
-    <div class="container">
-        <h4>How to Use Docjini</h4>
-        <h5>1.What is docjini?</h5>
+        <div class="container">
+            <h4>FAQ</h4>
 
 
+            <h5>1.What is docjini?</h5>
+            <p>Docjini is a <strong>Document Search Engine </strong>, which can be used to search Open Source Documents
+                across the web.
+                The term open Source Documents mean that which are publicly available on the internet </p>
 
+            <h5>2.How can I find various files and documents online?</h5>
+            <p>You can use Docjini to search various documents across the web by following the below steps:
+            <ol>
+                <li>Visit <a href="https://www.docjini.com">docjini</a>'s homepage.</li>
+                <li> <strong>Then Enter the search term</strong> or keyword of the document which you want to search.
+                </li>
+                <li>Then <strong>Choose the file format</strong> , i.e, in which format you want the documents.</li>
+                <li><strong>Click Search</strong> </li>
+            </ol>
+            That's all after you click search docjini will show all the matching documents across the web.
+            </p>
 
-    </div>
-</main>
-{% endblock content %}
+            <!-- <h5>3.g?</h5>
+            <p>Docjini is a <strong>Document Search Engine </strong>, which can be used to search Open Source Documents
+                across the web.
+                The term open Source Documents mean that which are publicly available on the internet </p> -->
+
+        </div>
+    </main>
+    {% include 'find/footer.html' %}
+</body>
+
+</html>

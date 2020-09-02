@@ -1,6 +1,21 @@
-{% extends 'find/base.html' %}
 {% load static %}
-{% block content %}
+<!-- Main section  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Docjini-Terms</title>
+    <meta name="description"
+        content="Docjini Terms">
+    {% include 'find/header.html' %}
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    {% include 'find/navbar.html' %}
+
+    <main>
 <div class="container">
     <h2><strong>Terms and Conditions</strong></h2>
 
@@ -182,4 +197,9 @@
     <p>As long as the website and the information and services on the website are provided free of charge, we will not
         be liable for any loss or damage of any nature.</p>
 </div>
-{% endblock content %}
+</main>
+<!-- Footer -->
+{% include 'find/footer.html' %}
+</body>
+
+</html>

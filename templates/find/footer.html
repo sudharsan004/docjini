@@ -1,0 +1,42 @@
+{% load static %}
+<footer class="page-footer purple darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <p class="white-text">Made with ❤ by Sudharsan Thiyagarajan</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <!-- <h5 class="white-text">Links</h5> -->
+          <ul>
+            <li><a class="grey-text text-lighten-4 right" style="padding-left:35px;" href="{% url 'terms' %}">Terms</a>
+            </li>
+            <li><a class="grey-text text-lighten-4 right" href="{% url 'privacy' %}">Privacy</a></li>
+          </ul>
+          <!-- <p class="grey-text text-lighten-4 ">You can use rows and columns here to organize your footer content.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright purple darken-2">
+      <div class="container">
+        © 2020 docjini
+        <!-- <a class="grey-text text-lighten-4 right" style="padding-left:25px;" href="{% url 'terms' %}">Terms</a>
+      <a class="grey-text text-lighten-4 right" href="{% url 'privacy' %}">Privacy</a> -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+
+  <script>
+    // select
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+    });
+    // Mobile Nav bar
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+  </script>
