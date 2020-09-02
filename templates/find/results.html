@@ -1,8 +1,22 @@
-{% extends 'find/base.html' %}
 {% load static %}
-{% block content %}
+<!-- Main section  -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <title>Docjini Document Search Engine Online</title>
+  <meta name="description"
+    content="Search and Download Free Pdf, Doc, excel, and many more formats across the web quickly, using docjini, A Open 
+    source document search engine">
+  {% include 'find/header.html' %}
+</head>
 
+<body>
+
+  <!-- Nav bar -->
+  {% include 'find/navbar.html' %}
+
+<main>
 <div class="container" style="margin-top: 150px;">
   <form action="{% url 'results'  %}" class="row" method="post">
     {% csrf_token %}
@@ -101,5 +115,8 @@
      </form> -->
 </div>
 
+</main>
+{% include 'find/footer.html' %}
+</body>
 
-{% endblock content %}
+</html>
