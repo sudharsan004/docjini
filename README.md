@@ -1,2 +1,1 @@
-# docsjini
-docsjini
+# Docjini- A document search engine
